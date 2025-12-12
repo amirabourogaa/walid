@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+// db 
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect('mongodb://localhost:27017/legal-glide', {
