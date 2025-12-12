@@ -1,0 +1,24 @@
+project_id = "wuulfgekzffpwdxkwwzi"
+
+[functions.notify-new-user]
+verify_jwt = true
+
+[functions.send-invoice-email]
+verify_jwt = true
+
+[functions.send-whatsapp-status]
+verify_jwt = true
+
+[functions.send-push-notification]
+verify_jwt = true
+
+[functions.whatsapp-webhook]
+verify_jwt = false
+
+[functions.archive-caisses]
+verify_jwt = false
+
+# Cron job to archive caisses and reset balances on 1st of each month at 00:10
+[[edge_runtime.scheduled_functions]]
+name = "archive-caisses"
+schedule = "10 0 1 * *"
